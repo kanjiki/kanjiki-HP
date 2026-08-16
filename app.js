@@ -9,36 +9,29 @@
   if (count) count.textContent = String(tools.length).padStart(2, '0');
 
   if (list) {
-    list.innerHTML = tools.map((tool, index) => {
-      const reverse = index % 2 === 1 ? ' project--reverse' : '';
-      const featured = tool.featured ? ' project--featured' : '';
+    list.innerHTML = tools.map((tool) => {
       const tags = tool.tags.map(tag => `<span>${tag}</span>`).join('');
-      const featuredBadge = tool.featured ? '<span class="featured-badge">FEATURED</span>' : '';
+      const featured = tool.featured ? ' work-card--featured' : '';
+      const badge = tool.featured ? '<span class="featured-badge">FEATURED</span>' : '';
       return `
-        <article class="project${reverse}${featured}" data-tone="${tool.tone}">
-          <div class="project__info">
-            <div class="project__meta">
-              <span class="project__number">${tool.id}</span>
-              <span class="project__code">${tool.code}</span>
-              ${featuredBadge}
-            </div>
-            <h2>${tool.title}</h2>
-            <p>${tool.description}</p>
-            <div class="project__tags">${tags}</div>
-            <a class="project__link" href="${tool.url}" target="_blank" rel="noopener">
-              ${tool.action}<span aria-hidden="true">↗</span>
-            </a>
+        <article class="work-card${featured}">
+          <div class="work-card__head">
+            <span class="work-card__number">${tool.id}</span>
+            ${badge}
           </div>
-          <a class="project__preview" href="${tool.url}" target="_blank" rel="noopener" aria-label="${tool.title}を開く">
-            <div class="browser-bar">
-              <span></span><span></span><span></span>
-              <small>${new URL(tool.url).pathname}</small>
-            </div>
+          <div class="work-card__copy">
+            <p class="work-card__code">${tool.code}</p>
+            <h3>${tool.title}</h3>
+            <p class="work-card__description">${tool.description}</p>
+            <div class="work-card__tags">${tags}</div>
+          </div>
+          <a class="work-card__preview" href="${tool.url}" target="_blank" rel="noopener" aria-label="${tool.title}を開く">
             <div class="preview-stage">
               <iframe src="${tool.url}" title="${tool.title} プレビュー" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
-              <div class="preview-shield"></div>
+              <span class="preview-shield"></span>
             </div>
           </a>
+          <a class="work-card__link" href="${tool.url}" target="_blank" rel="noopener">${tool.action} <span>↗</span></a>
         </article>`;
     }).join('');
   }
