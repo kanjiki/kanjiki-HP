@@ -1,83 +1,202 @@
 /* Generated paper/plaster texture layer, inspired by the uploaded washi and plaster references. */
 :root{--paper-texture:url('./assets/paper-texture.svg')}
 body{
-  background-color:#f3e9d5;
-  background-image:linear-gradient(rgba(244,236,220,.88),rgba(244,236,220,.88)),var(--paper-texture);
-  background-size:auto,720px 720px;
+  background-color:#e9ddc6;
+  background-image:
+    radial-gradient(circle at 20% 8%,rgba(255,255,255,.42),transparent 30%),
+    linear-gradient(rgba(240,230,211,.56),rgba(240,230,211,.56)),
+    var(--paper-texture);
+  background-size:auto,auto,620px 620px;
   background-attachment:fixed;
 }
 .site-header{
-  background-color:rgba(244,236,220,.92);
-  background-image:linear-gradient(rgba(244,236,220,.91),rgba(244,236,220,.91)),var(--paper-texture);
-  background-size:auto,560px 560px;
+  background-color:rgba(239,228,208,.95);
+  background-image:
+    linear-gradient(rgba(239,228,208,.76),rgba(239,228,208,.76)),
+    var(--paper-texture);
+  background-size:auto,500px 500px;
+  box-shadow:0 2px 12px rgba(78,54,34,.055);
 }
 .hero{
-  background-color:#f7efdf;
+  background-color:#f4ead7;
   background-image:
-    linear-gradient(110deg,rgba(255,250,240,.82) 0%,rgba(246,238,223,.80) 66%,rgba(239,226,205,.80) 100%),
+    radial-gradient(circle at 82% 48%,rgba(255,255,255,.22),transparent 26%),
+    linear-gradient(110deg,rgba(255,250,240,.60) 0%,rgba(246,238,223,.56) 66%,rgba(230,214,187,.62) 100%),
     var(--paper-texture);
-  background-size:auto,680px 680px;
+  background-size:auto,auto,560px 560px;
+  box-shadow:inset 0 -14px 30px rgba(91,63,38,.035);
 }
 .info-strip{
-  background-color:#eee3cf;
-  background-image:linear-gradient(rgba(239,229,210,.76),rgba(239,229,210,.76)),var(--paper-texture);
-  background-size:auto,620px 620px;
+  background-color:#e6d7bb;
+  background-image:
+    linear-gradient(rgba(230,215,187,.62),rgba(230,215,187,.62)),
+    var(--paper-texture);
+  background-size:auto,520px 520px;
+  box-shadow:inset 0 1px rgba(255,255,255,.35),inset 0 -1px rgba(83,55,31,.08);
 }
 .works-section{
-  background-color:#f8f0e1;
-  background-image:linear-gradient(rgba(248,240,225,.78),rgba(248,240,225,.78)),var(--paper-texture);
-  background-size:auto,700px 700px;
+  position:relative;
+  background-color:#eee2cd;
+  background-image:
+    radial-gradient(circle at 7% 12%,rgba(255,255,255,.34),transparent 21%),
+    linear-gradient(rgba(239,226,205,.58),rgba(239,226,205,.58)),
+    var(--paper-texture);
+  background-size:auto,auto,600px 600px;
+  box-shadow:inset 0 16px 34px rgba(83,55,31,.035);
+}
+.works-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(92,60,33,.018),transparent 9%,transparent 91%,rgba(92,60,33,.018));
+}
+
+/* Desktop gallery: the featured work gets half the row. */
+.works-grid{
+  display:grid;
+  grid-template-columns:minmax(0,6fr) repeat(3,minmax(0,2fr));
+  gap:16px;
+  align-items:stretch;
 }
 .work-card{
   position:relative;
   isolation:isolate;
-  background-color:#fffaf0;
-  background-image:linear-gradient(rgba(255,250,240,.76),rgba(255,250,240,.76)),var(--paper-texture);
-  background-size:auto,520px 520px;
-  box-shadow:0 7px 18px rgba(90,42,18,.065),inset 0 0 0 1px rgba(255,255,255,.28);
+  overflow:visible;
+  background-color:#f8efdd;
+  background-image:
+    linear-gradient(rgba(250,242,226,.58),rgba(250,242,226,.58)),
+    var(--paper-texture);
+  background-size:auto,430px 430px;
+  border:1px solid rgba(83,57,36,.22);
+  box-shadow:
+    0 2px 1px rgba(255,255,255,.52) inset,
+    0 12px 22px rgba(76,51,31,.095),
+    0 2px 4px rgba(76,51,31,.075);
+  transform:translateY(0) rotate(.08deg);
 }
+.work-card:nth-child(2){transform:translateY(3px) rotate(-.16deg)}
+.work-card:nth-child(3){transform:translateY(-1px) rotate(.13deg)}
+.work-card:nth-child(4){transform:translateY(4px) rotate(-.1deg)}
 .work-card::before{
   content:"";
   position:absolute;
-  inset:0;
+  inset:4px;
   z-index:-1;
   pointer-events:none;
-  border:1px solid rgba(86,62,40,.08);
-  box-shadow:inset 0 0 22px rgba(104,76,49,.035);
+  border:1px solid rgba(86,62,40,.055);
+  box-shadow:
+    inset 0 0 26px rgba(104,76,49,.06),
+    inset 0 1px rgba(255,255,255,.34);
+}
+.work-card::after{
+  content:"";
+  position:absolute;
+  left:8%;right:8%;bottom:-9px;height:10px;
+  z-index:-2;
+  background:rgba(70,44,25,.13);
+  filter:blur(7px);
+  border-radius:50%;
 }
 .work-card--featured{
-  background-color:#f3ecd8;
-  background-image:linear-gradient(150deg,rgba(250,246,232,.74),rgba(238,229,204,.76)),var(--paper-texture);
+  z-index:2;
+  padding:22px;
+  background-color:#f5ead0;
+  background-image:
+    radial-gradient(circle at 18% 10%,rgba(255,255,255,.38),transparent 26%),
+    linear-gradient(150deg,rgba(250,246,232,.55),rgba(229,214,178,.62)),
+    var(--paper-texture);
+  background-size:auto,auto,500px 500px;
+  border-color:rgba(80,107,44,.46);
+  box-shadow:
+    0 2px 1px rgba(255,255,255,.58) inset,
+    0 22px 38px rgba(73,54,31,.16),
+    0 5px 10px rgba(73,54,31,.10);
+  transform:translateY(-6px) rotate(-.16deg);
 }
+.work-card--featured::before{
+  inset:6px;
+  border-color:rgba(80,107,44,.08);
+  box-shadow:inset 0 0 34px rgba(101,79,43,.075);
+}
+.work-card--featured .work-card__number{font-size:46px}
+.work-card--featured h3{font-size:clamp(28px,2.4vw,40px)}
+.work-card--featured .work-card__description{font-size:11px;max-width:90%}
+.work-card__preview{
+  border-color:rgba(80,55,35,.26);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.45) inset,
+    0 7px 16px rgba(55,38,26,.12);
+}
+.work-card--featured .work-card__preview{height:315px;margin-top:18px}
+
+/* Dark cards keep their original identity, but gain visible printed-paper grain. */
 .work-card:nth-child(2){
-  background-image:linear-gradient(150deg,rgba(74,33,15,.92),rgba(46,21,11,.94)),var(--paper-texture);
-  background-blend-mode:multiply;
+  background-color:#4a210f;
+  background-image:
+    radial-gradient(circle at 15% 9%,rgba(199,131,59,.13),transparent 28%),
+    linear-gradient(150deg,rgba(74,33,15,.80),rgba(46,21,11,.84)),
+    var(--paper-texture);
+  background-blend-mode:screen,normal,multiply;
 }
 .work-card:nth-child(3){
-  background-image:linear-gradient(150deg,rgba(23,16,13,.93),rgba(9,9,9,.95)),var(--paper-texture);
-  background-blend-mode:multiply;
+  background-color:#17100d;
+  background-image:
+    radial-gradient(circle at 84% 12%,rgba(154,35,52,.13),transparent 27%),
+    linear-gradient(150deg,rgba(23,16,13,.84),rgba(9,9,9,.88)),
+    var(--paper-texture);
+  background-blend-mode:screen,normal,multiply;
 }
 .work-card:nth-child(4){
-  background-image:linear-gradient(150deg,rgba(23,48,32,.93),rgba(11,26,17,.95)),var(--paper-texture);
-  background-blend-mode:multiply;
+  background-color:#173020;
+  background-image:
+    radial-gradient(circle at 14% 12%,rgba(111,137,73,.12),transparent 28%),
+    linear-gradient(150deg,rgba(23,48,32,.83),rgba(11,26,17,.88)),
+    var(--paper-texture);
+  background-blend-mode:screen,normal,multiply;
 }
+
 .lower-grid{
-  background-color:#fffaf0;
-  background-image:linear-gradient(rgba(255,250,240,.80),rgba(255,250,240,.80)),var(--paper-texture);
-  background-size:auto,700px 700px;
+  background-color:#f6eddc;
+  background-image:
+    linear-gradient(rgba(246,237,220,.64),rgba(246,237,220,.64)),
+    var(--paper-texture);
+  background-size:auto,560px 560px;
+  box-shadow:inset 0 14px 30px rgba(78,52,31,.03);
 }
 .quick-link{
-  background-color:#f7efe1;
-  background-image:linear-gradient(rgba(248,241,228,.76),rgba(248,241,228,.76)),var(--paper-texture);
-  background-size:auto,480px 480px;
+  background-color:#eee2cd;
+  background-image:
+    linear-gradient(rgba(242,231,211,.64),rgba(242,231,211,.64)),
+    var(--paper-texture);
+  background-size:auto,400px 400px;
+  box-shadow:0 5px 12px rgba(71,47,28,.06);
 }
 footer{
   background-color:#3f2415;
-  background-image:linear-gradient(rgba(63,36,21,.91),rgba(63,36,21,.91)),var(--paper-texture);
+  background-image:
+    linear-gradient(rgba(63,36,21,.80),rgba(63,36,21,.80)),
+    var(--paper-texture);
   background-blend-mode:multiply;
-  background-size:auto,620px 620px;
+  background-size:auto,520px 520px;
 }
-/* Slightly soften crisp digital borders so cards read more like printed sheets. */
-.work-card,.work-card__preview,.quick-link{border-color:rgba(86,62,40,.22)}
-.section-head,.updates-list{border-color:rgba(86,62,40,.34)}
-@media(max-width:640px){body{background-attachment:scroll;background-size:auto,520px 520px}}
+.section-head,.updates-list{border-color:rgba(86,62,40,.42)}
+
+@media(max-width:1050px){
+  .works-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .work-card--featured{grid-column:1/-1;display:grid;grid-template-columns:minmax(280px,.75fr) minmax(360px,1.25fr);column-gap:24px;align-items:start}
+  .work-card--featured .work-card__head,.work-card--featured .work-card__copy,.work-card--featured .work-card__link{grid-column:1}
+  .work-card--featured .work-card__preview{grid-column:2;grid-row:1/5;height:320px;margin-top:0}
+}
+@media(max-width:760px){
+  body{background-attachment:scroll;background-size:auto,auto,480px 480px}
+  .works-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .work-card--featured{grid-column:1/-1;display:block;padding:18px}
+  .work-card--featured .work-card__preview{height:255px;margin-top:15px}
+  .work-card--featured .work-card__description{max-width:none}
+}
+@media(max-width:640px){
+  .works-grid{grid-template-columns:1fr}
+  .work-card,.work-card:nth-child(2),.work-card:nth-child(3),.work-card:nth-child(4),.work-card--featured{transform:none}
+  .work-card--featured .work-card__preview{height:230px}
+}
