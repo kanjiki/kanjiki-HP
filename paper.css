@@ -1,0 +1,83 @@
+/* Generated paper/plaster texture layer, inspired by the uploaded washi and plaster references. */
+:root{--paper-texture:url('./assets/paper-texture.svg')}
+body{
+  background-color:#f3e9d5;
+  background-image:linear-gradient(rgba(244,236,220,.88),rgba(244,236,220,.88)),var(--paper-texture);
+  background-size:auto,720px 720px;
+  background-attachment:fixed;
+}
+.site-header{
+  background-color:rgba(244,236,220,.92);
+  background-image:linear-gradient(rgba(244,236,220,.91),rgba(244,236,220,.91)),var(--paper-texture);
+  background-size:auto,560px 560px;
+}
+.hero{
+  background-color:#f7efdf;
+  background-image:
+    linear-gradient(110deg,rgba(255,250,240,.82) 0%,rgba(246,238,223,.80) 66%,rgba(239,226,205,.80) 100%),
+    var(--paper-texture);
+  background-size:auto,680px 680px;
+}
+.info-strip{
+  background-color:#eee3cf;
+  background-image:linear-gradient(rgba(239,229,210,.76),rgba(239,229,210,.76)),var(--paper-texture);
+  background-size:auto,620px 620px;
+}
+.works-section{
+  background-color:#f8f0e1;
+  background-image:linear-gradient(rgba(248,240,225,.78),rgba(248,240,225,.78)),var(--paper-texture);
+  background-size:auto,700px 700px;
+}
+.work-card{
+  position:relative;
+  isolation:isolate;
+  background-color:#fffaf0;
+  background-image:linear-gradient(rgba(255,250,240,.76),rgba(255,250,240,.76)),var(--paper-texture);
+  background-size:auto,520px 520px;
+  box-shadow:0 7px 18px rgba(90,42,18,.065),inset 0 0 0 1px rgba(255,255,255,.28);
+}
+.work-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  border:1px solid rgba(86,62,40,.08);
+  box-shadow:inset 0 0 22px rgba(104,76,49,.035);
+}
+.work-card--featured{
+  background-color:#f3ecd8;
+  background-image:linear-gradient(150deg,rgba(250,246,232,.74),rgba(238,229,204,.76)),var(--paper-texture);
+}
+.work-card:nth-child(2){
+  background-image:linear-gradient(150deg,rgba(74,33,15,.92),rgba(46,21,11,.94)),var(--paper-texture);
+  background-blend-mode:multiply;
+}
+.work-card:nth-child(3){
+  background-image:linear-gradient(150deg,rgba(23,16,13,.93),rgba(9,9,9,.95)),var(--paper-texture);
+  background-blend-mode:multiply;
+}
+.work-card:nth-child(4){
+  background-image:linear-gradient(150deg,rgba(23,48,32,.93),rgba(11,26,17,.95)),var(--paper-texture);
+  background-blend-mode:multiply;
+}
+.lower-grid{
+  background-color:#fffaf0;
+  background-image:linear-gradient(rgba(255,250,240,.80),rgba(255,250,240,.80)),var(--paper-texture);
+  background-size:auto,700px 700px;
+}
+.quick-link{
+  background-color:#f7efe1;
+  background-image:linear-gradient(rgba(248,241,228,.76),rgba(248,241,228,.76)),var(--paper-texture);
+  background-size:auto,480px 480px;
+}
+footer{
+  background-color:#3f2415;
+  background-image:linear-gradient(rgba(63,36,21,.91),rgba(63,36,21,.91)),var(--paper-texture);
+  background-blend-mode:multiply;
+  background-size:auto,620px 620px;
+}
+/* Slightly soften crisp digital borders so cards read more like printed sheets. */
+.work-card,.work-card__preview,.quick-link{border-color:rgba(86,62,40,.22)}
+.section-head,.updates-list{border-color:rgba(86,62,40,.34)}
+@media(max-width:640px){body{background-attachment:scroll;background-size:auto,520px 520px}}
