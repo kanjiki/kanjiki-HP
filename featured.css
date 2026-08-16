@@ -1,0 +1,6 @@
+.project--featured{position:relative;min-height:calc(100vh - 72px)}
+.project--featured::before{content:"FEATURED WORK";position:absolute;top:22px;right:max(28px,calc((100vw - var(--max))/2));font-size:9px;font-weight:900;letter-spacing:.18em;opacity:.48}
+.featured-badge{margin-left:auto;padding:5px 9px;border:1px solid currentColor;border-radius:999px;font-size:8px;font-weight:900;letter-spacing:.16em;opacity:.58}
+.project--featured .project__preview{transform:scale(1.015);box-shadow:0 42px 110px rgba(35,36,32,.16)}
+.project--featured .project__preview:hover{transform:translateY(-7px) scale(1.02)}
+@media(max-width:640px){.project--featured::before{top:16px;right:14px}.featured-badge{display:none}.project--featured .project__preview{transform:none}.project--featured .project__preview:hover{transform:translateY(-4px)}}
