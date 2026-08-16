@@ -1,10 +1,10 @@
 :root{
-  --paper:#f1e8d7;
-  --paper-light:#faf6ee;
+  --paper:#f4efe6;
+  --paper-light:#fbf8f2;
   --ink:#2a1b12;
   --brown:#5a2a12;
   --moss:#506b2c;
-  --line:rgba(83,56,36,.20);
+  --line:rgba(83,56,36,.18);
   --muted:#766655;
   --max:1120px;
 }
@@ -14,19 +14,18 @@ html{scroll-behavior:smooth}
 body{
   margin:0;
   color:var(--ink);
-  background:var(--paper);
+  background:#f4efe6;
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;
   line-height:1.7;
 }
 a{color:inherit}
-.wrap{width:min(calc(100% - 36px),var(--max));margin:auto}
+.wrap{width:min(calc(100% - 48px),var(--max));margin:auto}
 
 .site-header{
   position:sticky;
   top:0;
   z-index:50;
-  background:rgba(241,232,215,.96);
-  backdrop-filter:blur(10px);
+  background:#f4efe6;
   border-bottom:1px solid var(--line);
 }
 .header-inner{min-height:50px;display:flex;align-items:center;justify-content:space-between;gap:18px}
@@ -41,7 +40,7 @@ nav a:hover{color:var(--brown)}
 
 .hero{
   border-bottom:1px solid var(--line);
-  background:var(--paper-light);
+  background:#fbf8f2;
 }
 .hero-inner--icon-only{
   min-height:0;
@@ -57,13 +56,13 @@ nav a:hover{color:var(--brown)}
 
 .section-kicker{font-size:9px;font-weight:900;letter-spacing:.16em;color:var(--brown);margin-bottom:14px}
 
-.featured-section{padding:32px 0 40px}
+.featured-section{padding:32px 0 40px;background:#f4efe6}
 .featured-paper{
   display:grid;
   grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr);
   gap:30px;
   padding:32px;
-  background:var(--paper-light);
+  background:#fbf8f2;
   border:1px solid var(--line);
 }
 .featured-copy{display:flex;flex-direction:column;justify-content:center;min-width:0}
@@ -72,14 +71,14 @@ nav a:hover{color:var(--brown)}
 .featured-copy h2{margin:0;font-family:Georgia,'Yu Mincho','Hiragino Mincho ProN',serif;font-size:clamp(30px,3vw,44px);line-height:1.18}
 .featured-copy>p{margin:13px 0 0;font-size:11px;color:var(--muted);max-width:430px}
 .tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:13px}
-.tags span{font-size:7px;border:1px solid rgba(90,42,18,.24);padding:3px 6px;background:rgba(255,255,255,.35)}
+.tags span{font-size:7px;border:1px solid rgba(90,42,18,.24);padding:3px 6px;background:#fffaf3}
 .tool-link{margin-top:18px;display:inline-flex;width:max-content;gap:10px;align-items:center;text-decoration:none;font-size:10px;font-weight:900;color:var(--moss);border-bottom:1px solid var(--moss);padding-bottom:3px}
 .featured-preview,.row-preview{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line)}
 .featured-preview{aspect-ratio:16/9;align-self:center}
 .featured-preview iframe,.row-preview iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;background:#fff}
 .preview-cover{position:absolute;inset:0;pointer-events:none}
 
-.other-section{padding:0 0 42px}
+.other-section{padding:0 0 42px;background:#f4efe6}
 .other-list{border-top:1px solid var(--line)}
 .work-row{
   display:grid;
@@ -97,7 +96,7 @@ nav a:hover{color:var(--brown)}
 .work-row .tool-link{margin-top:10px;font-size:9px;color:var(--brown);border-color:var(--brown)}
 .row-preview{height:170px}
 
-.updates-section{padding:28px 0 36px;border-top:1px solid var(--line);background:rgba(250,246,238,.55)}
+.updates-section{padding:28px 0 36px;border-top:1px solid var(--line);background:#fbf8f2}
 .updates-list{border-top:1px solid var(--line)}
 .update-row{display:grid;grid-template-columns:82px 1fr 1.4fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(83,56,36,.12);font-size:9px}
 .update-row time,.update-row span{color:var(--muted)}
@@ -116,12 +115,13 @@ footer{background:#3d2619;color:#f0dec1;padding:14px 0}
 }
 
 @media(max-width:620px){
-  .wrap{width:min(calc(100% - 22px),var(--max))}
-  .header-inner{min-height:46px;gap:8px}
-  .brand img{width:18px;height:18px}
-  .brand-copy strong{font-size:12.5px}
+  .wrap{width:min(calc(100% - 40px),var(--max))}
+  .header-inner{min-height:48px;gap:10px}
+  .brand{margin-left:2px;gap:9px}
+  .brand img{width:20px;height:20px}
+  .brand-copy strong{font-size:13px}
   .brand-copy small{display:none}
-  nav{gap:9px}
+  nav{gap:10px;margin-right:2px}
   nav a{font-size:8px}
   nav a:nth-child(1),nav a:nth-child(3){display:none}
 
