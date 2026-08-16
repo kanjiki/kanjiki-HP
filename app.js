@@ -11,13 +11,16 @@
   if (list) {
     list.innerHTML = tools.map((tool, index) => {
       const reverse = index % 2 === 1 ? ' project--reverse' : '';
+      const featured = tool.featured ? ' project--featured' : '';
       const tags = tool.tags.map(tag => `<span>${tag}</span>`).join('');
+      const featuredBadge = tool.featured ? '<span class="featured-badge">FEATURED</span>' : '';
       return `
-        <article class="project${reverse}" data-tone="${tool.tone}">
+        <article class="project${reverse}${featured}" data-tone="${tool.tone}">
           <div class="project__info">
             <div class="project__meta">
               <span class="project__number">${tool.id}</span>
               <span class="project__code">${tool.code}</span>
+              ${featuredBadge}
             </div>
             <h2>${tool.title}</h2>
             <p>${tool.description}</p>
