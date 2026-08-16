@@ -2,217 +2,84 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f1ea">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4f1eb">
   <title>kanjiki TRPG Tools</title>
   <meta name="description" content="TRPG / CoCで楽しく遊べるものや、ちょっと便利なツールを作っています。">
   <meta property="og:title" content="kanjiki TRPG Tools">
   <meta property="og:description" content="TRPG / CoCで楽しく遊べるものや、ちょっと便利なツールを作っています。">
   <meta property="og:type" content="website">
-  <style>
-    :root {
-      --bg:#f4f1ea;
-      --paper:#fffdf9;
-      --ink:#252525;
-      --muted:#706d67;
-      --line:#ddd7cd;
-      --accent:#3d5050;
-      --accent-dark:#2e3d3d;
-      --soft:#ece8df;
-      --shadow:0 18px 50px rgba(35,35,30,.07);
-      --max:1080px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      color:var(--ink);
-      background:
-        radial-gradient(circle at 78% 0%,rgba(61,80,80,.11),transparent 34rem),
-        var(--bg);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
-      line-height:1.75;
-    }
-    a{color:inherit}
-    .wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
-    header{padding:28px 0}
-    .head{display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{text-decoration:none;line-height:1}
-    .brand strong{display:block;font-size:22px;letter-spacing:-.045em}
-    .brand span{display:block;margin-top:7px;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.18em}
-    nav{display:flex;gap:20px;align-items:center}
-    nav a{color:var(--muted);font-size:13px;font-weight:700;text-decoration:none}
-    nav a:hover{color:var(--ink)}
-    .hero{display:flex;align-items:center;min-height:560px;padding:76px 0 110px}
-    .hero-inner{max-width:780px}
-    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.04em}
-    .eyebrow::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--accent)}
-    h1{margin:24px 0 0;font-size:clamp(44px,7.8vw,84px);line-height:1.06;letter-spacing:-.065em}
-    .lead{max-width:640px;margin:28px 0 0;color:var(--muted);font-size:clamp(16px,2vw,19px);line-height:1.95}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:14px;font-weight:800;text-decoration:none;transition:.18s ease}
-    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(30,30,25,.08)}
-    .btn.primary{border-color:var(--accent);background:var(--accent);color:#fff}
-    .btn.primary:hover{background:var(--accent-dark)}
-    section{padding:88px 0}
-    .section-head{margin-bottom:34px}
-    .kicker{margin:0 0 8px;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
-    h2{margin:0;font-size:clamp(30px,4vw,46px);letter-spacing:-.045em;line-height:1.2}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-    .card{display:flex;flex-direction:column;min-height:410px;padding:34px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,#fff,#f9f7f2);box-shadow:var(--shadow);transition:.2s ease}
-    .card:hover{transform:translateY(-5px);box-shadow:0 24px 58px rgba(35,35,30,.10)}
-    .icon{display:grid;place-items:center;width:58px;height:58px;margin-bottom:48px;border-radius:17px;background:var(--soft);font-size:26px}
-    .card h3{margin:0;font-size:28px;letter-spacing:-.04em;line-height:1.35}
-    .card p{margin:14px 0 0;color:var(--muted);font-size:15px;line-height:1.9}
-    .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
-    .tag{padding:5px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:11px;font-weight:700}
-    .card-foot{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:auto;padding-top:34px}
-    .go{color:var(--accent);font-size:14px;font-weight:800;text-decoration:none}
-    .go:hover{text-decoration:underline}
-    .num{color:#bdb8af;font-size:12px;font-weight:800;letter-spacing:.12em}
-    .updates{overflow:hidden;border:1px solid var(--line);border-radius:24px;background:rgba(255,253,249,.72)}
-    .update{display:grid;grid-template-columns:130px 1fr;gap:26px;padding:25px 30px;border-bottom:1px solid var(--line)}
-    .update:last-child{border-bottom:0}
-    .status{color:var(--muted);font-size:13px;font-weight:700}
-    .update strong{display:block;font-size:15px}
-    .update span{display:block;margin-top:3px;color:var(--muted);font-size:13px}
-    .about{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
-    .about p{max-width:600px;margin:20px 0 0;color:var(--muted);font-size:16px;line-height:2}
-    .profile{padding:30px;border:1px solid var(--line);border-radius:24px;background:var(--paper)}
-    .profile strong{display:block;font-size:24px;letter-spacing:-.03em}
-    .profile small{display:block;margin:4px 0 20px;color:var(--muted)}
-    footer{padding:42px 0;border-top:1px solid var(--line)}
-    .foot{display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}
-    .foot-links{display:flex;gap:18px}
-    .foot-links a{text-decoration:none}
-    @media(max-width:760px){
-      .wrap{width:min(calc(100% - 28px),var(--max))}
-      header{padding:22px 0}
-      nav a:not(.x){display:none}
-      .hero{min-height:auto;padding:82px 0 88px}
-      h1{font-size:clamp(42px,14vw,64px)}
-      section{padding:70px 0}
-      .grid,.about{grid-template-columns:1fr}
-      .card{min-height:360px;padding:28px}
-      .icon{margin-bottom:38px}
-      .update{grid-template-columns:1fr;gap:7px;padding:22px}
-      .about{gap:30px}
-      .foot{align-items:flex-start;flex-direction:column}
-    }
-  </style>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header>
-    <div class="wrap head">
-      <a class="brand" href="#top" aria-label="kanjiki TRPG Tools ホーム">
-        <strong>kanjiki</strong>
-        <span>TRPG TOOLS</span>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="kanjiki TRPG Tools">
+        <strong>kanjiki</strong><span>TRPG TOOLS</span>
       </a>
       <nav aria-label="メインナビゲーション">
         <a href="#tools">Tools</a>
         <a href="#updates">Updates</a>
-        <a class="x" href="https://x.com/kanjiki_trpg" target="_blank" rel="noopener">X ↗</a>
+        <a href="https://x.com/kanjiki_trpg" target="_blank" rel="noopener">X ↗</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="wrap hero-inner">
-        <div class="eyebrow">TRPG / CoC tools</div>
-        <h1>TRPGで遊ぶのを、<br>ちょっと楽しく。<br>ちょっと便利に。</h1>
-        <p class="lead">TRPG / CoCで楽しく遊べるものや、ちょっと便利なツールを作っています。</p>
-        <div class="actions">
-          <a class="btn primary" href="#tools">公開中のツールを見る ↓</a>
-          <a class="btn" href="https://x.com/kanjiki_trpg" target="_blank" rel="noopener">Xで更新を見る ↗</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="tools">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="kicker">Available now</p>
-          <h2>公開中</h2>
-        </div>
-
-        <div class="grid">
-          <article class="card">
-            <div class="icon" aria-hidden="true">🎲</div>
-            <h3>CoCプレイヤー診断</h3>
-            <p>あなたがTRPGで何を重視して遊ぶタイプなのかを、22問・T / R / P / Gの4軸から診断します。</p>
-            <div class="tags">
-              <span class="tag">診断</span>
-              <span class="tag">CoC</span>
-              <span class="tag">無料</span>
-            </div>
-            <div class="card-foot">
-              <a class="go" href="https://kanjiki.github.io/coc-player-type/" target="_blank" rel="noopener">診断してみる →</a>
-              <span class="num">01</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="icon" aria-hidden="true">🔎</div>
-            <h3>この自陣、次どこ行く？</h3>
-            <p>通過済みシナリオから、継続探索者で遊べる次のシナリオ候補を探せるCoC継続検索ツールです。</p>
-            <div class="tags">
-              <span class="tag">継続探索者</span>
-              <span class="tag">シナリオ検索</span>
-              <span class="tag">CoC</span>
-            </div>
-            <div class="card-foot">
-              <a class="go" href="https://kanjiki.github.io/coc-continuation-finder/" target="_blank" rel="noopener">継続先を探す →</a>
-              <span class="num">02</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="updates">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="kicker">Updates</p>
-          <h2>いま使えるもの</h2>
-        </div>
-        <div class="updates">
-          <div class="update">
-            <div class="status">公開中</div>
-            <div><strong>CoCプレイヤー診断</strong><span>T / R / P / Gの4軸・12タイプで遊び方の傾向を診断できます。</span></div>
-          </div>
-          <div class="update">
-            <div class="status">公開中</div>
-            <div><strong>この自陣、次どこ行く？</strong><span>継続探索者で遊ぶ次のシナリオ候補を検索できます。</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="wrap about">
+      <div class="wrap hero-grid">
         <div>
-          <p class="kicker">About</p>
-          <h2>つくっている人</h2>
-          <p>TRPG / CoCで遊んだり、遊ぶときにあったら便利そうなものを思いついたら作ったりしています。</p>
+          <p class="hero-label">KANJIKI / TRPG TOOLS</p>
+          <h1>TOOLS<br>FOR TRPG.</h1>
+          <p class="hero-copy">TRPG / CoCで楽しく遊べるものや、<br>ちょっと便利なツールを作っています。</p>
         </div>
-        <div class="profile">
-          <strong>kanjiki</strong>
-          <small>@kanjiki_trpg</small>
-          <a class="btn primary" href="https://x.com/kanjiki_trpg" target="_blank" rel="noopener">Xを見る ↗</a>
+        <aside class="hero-side" aria-label="公開中のツール数">
+          <div class="counter"><strong data-tool-count>00</strong><span>AVAILABLE TOOLS</span></div>
+          <p>制作物そのものを中心に並べています。気になるものから、そのまま遊べます。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="tools" class="wrap">
+      <div class="tools-head">
+        <span>SELECTED TOOLS</span>
+        <small>LIVE PREVIEW / CLICK TO OPEN</small>
+      </div>
+      <div id="tool-list"></div>
+    </section>
+
+    <section id="updates" class="updates-section">
+      <div class="wrap">
+        <div class="section-title">
+          <p>UPDATES</p>
+          <h2>いま使えるもの。</h2>
         </div>
+        <div id="updates-list" class="updates-list"></div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="wrap about-grid">
+        <div>
+          <h2>kanjiki</h2>
+          <div class="about-links">
+            <a href="https://x.com/kanjiki_trpg" target="_blank" rel="noopener">X ↗</a>
+            <a href="https://github.com/kanjiki" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+        <p>TRPG / CoCで遊んだり、遊ぶときにあったら便利そうなものを思いついたら作ったりしています。</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap foot">
+    <div class="wrap footer-inner">
       <span>© kanjiki TRPG Tools</span>
-      <div class="foot-links">
-        <a href="https://x.com/kanjiki_trpg" target="_blank" rel="noopener">X</a>
-        <a href="https://github.com/kanjiki" target="_blank" rel="noopener">GitHub</a>
-      </div>
+      <span>PLAY / FIND / ENJOY</span>
     </div>
   </footer>
+
+  <script src="./tools.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
