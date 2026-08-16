@@ -1,6 +1,17 @@
 window.KANJIKI_TOOLS = [
   {
     id: "01",
+    code: "CONTINUATION FINDER",
+    title: "この自陣、次どこ行く？",
+    description: "通過済みシナリオから、継続探索者で遊べる次のシナリオ候補を探せるCoC継続検索ツールです。",
+    url: "https://kanjiki.github.io/coc-continuation-finder/",
+    action: "継続先を探す",
+    tags: ["継続探索者", "シナリオ検索", "CoC"],
+    tone: "paper",
+    featured: true
+  },
+  {
+    id: "02",
     code: "COC PLAYER TYPE",
     title: "CoCプレイヤー診断",
     description: "22の質問から、TRPGで何を重視して遊ぶタイプなのかを T / R / P / G の4軸・12タイプで診断します。",
@@ -8,16 +19,6 @@ window.KANJIKI_TOOLS = [
     action: "診断してみる",
     tags: ["診断", "22問", "T / R / P / G"],
     tone: "ink"
-  },
-  {
-    id: "02",
-    code: "CONTINUATION FINDER",
-    title: "この自陣、次どこ行く？",
-    description: "通過済みシナリオから、継続探索者で遊べる次のシナリオ候補を探せるCoC継続検索ツールです。",
-    url: "https://kanjiki.github.io/coc-continuation-finder/",
-    action: "継続先を探す",
-    tags: ["継続探索者", "シナリオ検索", "CoC"],
-    tone: "paper"
   },
   {
     id: "03",
@@ -42,8 +43,8 @@ window.KANJIKI_TOOLS = [
 ];
 
 window.KANJIKI_UPDATES = [
+  { date: "2026.08", title: "この自陣、次どこ行く？", text: "継続探索者向けのシナリオ候補検索を公開中。" },
   { date: "2026.08", title: "GHOUL KP STYLE TEST", text: "G / H / O / U / L の5軸でKPの判断傾向を見る診断を公開中。" },
   { date: "2026.08", title: "その角を曲がる前に", text: "プレイ型の探索者ステータス診断を公開中。" },
-  { date: "2026.08", title: "この自陣、次どこ行く？", text: "継続探索者向けのシナリオ候補検索を公開中。" },
   { date: "2026.08", title: "CoCプレイヤー診断", text: "T / R / P / G の4軸・12タイプで診断できます。" }
 ];
