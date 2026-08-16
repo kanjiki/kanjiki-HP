@@ -28,10 +28,21 @@ window.KANJIKI_TOOLS = [
     action: "遊んでみる",
     tags: ["プレイ型診断", "24 Scenes", "ステータス"],
     tone: "mist"
+  },
+  {
+    id: "04",
+    code: "GHOUL KP STYLE TEST",
+    title: "GHOUL KP STYLE TEST",
+    description: "KPとして卓でどんな判断を重視しやすいかを、Game / Host / Orchestration / Unscripted / Logic の5軸から見るKPスタイル診断です。",
+    url: "https://kanjiki.github.io/kanjiki-HP/ghoul-kp-style/",
+    action: "KPスタイルを診断する",
+    tags: ["KP診断", "G / H / O / U / L", "CoC"],
+    tone: "ink"
   }
 ];
 
 window.KANJIKI_UPDATES = [
+  { date: "2026.08", title: "GHOUL KP STYLE TEST", text: "G / H / O / U / L の5軸でKPの判断傾向を見る診断を公開中。" },
   { date: "2026.08", title: "その角を曲がる前に", text: "プレイ型の探索者ステータス診断を公開中。" },
   { date: "2026.08", title: "この自陣、次どこ行く？", text: "継続探索者向けのシナリオ候補検索を公開中。" },
   { date: "2026.08", title: "CoCプレイヤー診断", text: "T / R / P / G の4軸・12タイプで診断できます。" }
