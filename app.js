@@ -3,10 +3,12 @@
   const updates = Array.isArray(window.KANJIKI_UPDATES) ? window.KANJIKI_UPDATES : [];
 
   const list = document.querySelector('#tool-list');
-  const count = document.querySelector('[data-tool-count]');
+  const counters = document.querySelectorAll('[data-tool-count]');
   const updatesList = document.querySelector('#updates-list');
 
-  if (count) count.textContent = String(tools.length).padStart(2, '0');
+  counters.forEach((count) => {
+    count.textContent = String(tools.length).padStart(2, '0');
+  });
 
   if (list) {
     list.innerHTML = tools.map((tool) => {
