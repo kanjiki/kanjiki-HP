@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f4ecdc">
+  <meta name="theme-color" content="#f3ead8">
   <title>かんじき屋 | TRPG Tools</title>
   <meta name="description" content="TRPGで遊べるもの、ちょっと便利なもの。かんじき屋のTRPG / CoCツール置き場です。">
   <meta property="og:title" content="かんじき屋 | TRPG Tools">
@@ -11,8 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://kanjiki.github.io/kanjiki-HP/assets/kanjikiya-icon.webp">
   <link rel="icon" href="./assets/kanjikiya-icon.webp" type="image/webp">
-  <link rel="stylesheet" href="./wa-modern.css?v=20260817-0501">
-  <link rel="stylesheet" href="./paper.css?v=20260817-0501">
+  <link rel="stylesheet" href="./site-v2.css?v=20260817-0506">
 </head>
 <body>
   <header class="site-header">
@@ -22,9 +21,10 @@
         <span><strong>かんじき屋</strong><small>TRPG TOOLS</small></span>
       </a>
       <nav aria-label="メインナビゲーション">
-        <a href="#tools">Gallery</a>
+        <a href="#featured">Featured</a>
+        <a href="#works">Works</a>
         <a href="#updates">Updates</a>
-        <a href="https://x.com/kanjiki_trpg_k" target="_blank" rel="noopener">X @kanjiki_trpg_k ↗</a>
+        <a href="https://x.com/kanjiki_trpg_k" target="_blank" rel="noopener">X ↗</a>
       </nav>
     </div>
   </header>
@@ -32,58 +32,40 @@
   <main id="top">
     <section class="hero">
       <div class="wrap hero-inner">
-        <div class="hero-copy">
+        <div>
           <p class="eyebrow">KANJIKIYA / TRPG TOOLS</p>
           <h1>かんじき屋</h1>
           <p class="tagline">TRPGで遊べるもの、<br>ちょっと便利なもの。</p>
-          <div class="hero-actions">
-            <a class="primary" href="#tools">作品を見る →</a>
+          <div class="hero-links">
+            <a href="#featured">注目の作品を見る</a>
             <a href="https://x.com/kanjiki_trpg_k" target="_blank" rel="noopener">更新情報をXで見る ↗</a>
           </div>
         </div>
         <div class="hero-art" aria-hidden="true">
-          <img class="elder-sign" src="./assets/elder-sign.png" alt="">
+          <img class="elder" src="./assets/elder-sign.png" alt="">
           <img class="mascot" src="./assets/takoyaki.webp" alt="">
         </div>
       </div>
     </section>
 
-    <section class="info-strip" aria-label="サイト情報">
+    <section id="featured" class="featured-section">
       <div class="wrap">
-        <div class="info-item"><b>公開中の制作物</b><span><strong data-tool-count>00</strong> 件</span></div>
-        <div class="info-item"><b>主な内容</b><span>CoC診断 / シナリオ検索 / プレイ型ツール</span></div>
-        <div class="info-item"><b>利用</b><span>ブラウザからそのまま利用できます</span></div>
+        <div class="section-label">FEATURED WORK</div>
+        <div id="featured-work" class="featured-grid"></div>
       </div>
     </section>
 
-    <section id="tools" class="works-section">
+    <section id="works" class="other-section">
       <div class="wrap">
-        <div class="section-head">
-          <div class="section-title-wrap">
-            <span class="die" aria-hidden="true"></span>
-            <h2>注目の作品</h2>
-            <small>SELECTED WORKS</small>
-          </div>
-          <span class="work-count"><strong data-tool-count>00</strong> WORKS</span>
-        </div>
-        <div id="tool-list" class="works-grid"></div>
+        <div class="section-label">OTHER WORKS</div>
+        <div id="other-works" class="other-list"></div>
       </div>
     </section>
 
-    <section id="updates" class="lower-grid">
+    <section id="updates" class="updates-section">
       <div class="wrap">
-        <div class="updates-panel">
-          <div class="panel-head"><h2>更新情報</h2><small>UPDATES</small></div>
-          <div id="updates-list" class="updates-list"></div>
-        </div>
-        <aside class="links-panel">
-          <div class="panel-head"><h2>リンク</h2><small>LINKS</small></div>
-          <div class="quick-links">
-            <a class="quick-link" href="#tools"><span><b>公開中のツール</b><span>診断・検索ツール一覧</span></span><span>→</span></a>
-            <a class="quick-link" href="https://x.com/kanjiki_trpg_k" target="_blank" rel="noopener"><span><b>X</b><span>公開・更新情報</span></span><span>↗</span></a>
-            <a class="quick-link" href="https://github.com/kanjiki" target="_blank" rel="noopener"><span><b>GitHub</b><span>公開リポジトリ</span></span><span>↗</span></a>
-          </div>
-        </aside>
+        <div class="section-label">UPDATES</div>
+        <div id="updates-list" class="updates-list"></div>
       </div>
     </section>
   </main>
@@ -96,7 +78,7 @@
     </div>
   </footer>
 
-  <script src="./tools.js?v=20260817-0501"></script>
-  <script src="./app.js?v=20260817-0501"></script>
+  <script src="./tools.js?v=20260817-0506"></script>
+  <script src="./app-v2.js?v=20260817-0506"></script>
 </body>
 </html>
