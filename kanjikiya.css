@@ -1,0 +1,53 @@
+:root{
+  --shop-brown:#5A2A12;
+  --shop-burn:#A76417;
+  --shop-cream:#F0D28D;
+  --shop-red:#9A2334;
+  --shop-moss:#506B2C;
+  --shop-black:#15110E;
+  --shop-paper:#F3E9D5;
+}
+
+body{background:var(--shop-paper);color:var(--shop-black)}
+.site-header{background:rgba(243,233,213,.92);border-color:rgba(90,42,18,.18)}
+.header-inner{height:76px}
+.brand{gap:12px;align-items:center}.brand-mark{width:44px;height:44px;object-fit:contain;flex:none}.brand-copy{display:flex;flex-direction:column;line-height:1.05}.brand-copy strong{font-size:22px;color:var(--shop-brown);letter-spacing:.02em}.brand-copy>span{margin-top:6px;font-size:8px;color:#725e4b;letter-spacing:.15em;font-weight:800}
+nav a{color:#6b5a4a}nav a:hover{color:var(--shop-brown)}
+
+.intro{position:relative;overflow:hidden;background:linear-gradient(115deg,#fffaf0 0%,#f6eedf 65%,#efe4cf 100%);border-color:rgba(90,42,18,.14);padding:88px 0 72px}
+.intro::before{content:"";position:absolute;left:-7vw;bottom:-120px;width:360px;height:260px;background:radial-gradient(circle at 40% 40%,rgba(80,107,44,.13),transparent 58%);filter:blur(8px);pointer-events:none}
+.intro-inner{grid-template-columns:minmax(0,1fr) minmax(320px,.85fr);align-items:center}
+.intro-label{color:var(--shop-moss)}
+.intro h1{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(64px,8vw,112px);line-height:1;letter-spacing:.02em;color:var(--shop-brown);font-weight:700}
+.intro-tagline{margin:28px 0 0;font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(22px,2.2vw,34px);line-height:1.75;color:#553a25}
+.intro-social{display:inline-flex;margin-top:28px;padding-bottom:6px;border-bottom:1px solid rgba(90,42,18,.5);text-decoration:none;color:#5b4a3b;font-size:12px;font-weight:800}
+.intro-copy{position:relative;align-items:center}.hero-mascot{display:block;width:min(100%,520px);max-height:430px;object-fit:contain;filter:drop-shadow(0 24px 34px rgba(90,42,18,.15));transform:rotate(1.5deg)}
+.intro-count{width:min(100%,430px);border-color:rgba(90,42,18,.48)}.intro-count strong{color:var(--shop-brown)}
+
+.gallery-section{background:#f5ecda}.gallery-head{color:#5f513f}.gallery-head span{color:var(--shop-brown)}
+.project{border-color:rgba(0,0,0,.12)}
+.project:nth-child(1){background:linear-gradient(115deg,#f4ecd7 0%,#eee4c8 100%);color:#263119}
+.project:nth-child(1) .project__number{color:var(--shop-moss)}
+.project:nth-child(1) .project__link{background:var(--shop-moss);color:#fff;border:0;padding:13px 18px;border-radius:4px}
+.project:nth-child(1) .project__preview{border-color:rgba(80,107,44,.38);box-shadow:0 34px 90px rgba(80,107,44,.16)}
+.project:nth-child(1)::after{content:"おすすめ";position:absolute;right:max(28px,calc((100vw - var(--max))/2));bottom:22px;color:rgba(80,107,44,.25);font-family:Georgia,serif;font-size:11px;letter-spacing:.18em}
+
+.project:nth-child(2){background:radial-gradient(circle at 12% 84%,rgba(167,100,23,.2),transparent 24%),linear-gradient(120deg,#4a200e,#2f160c 68%,#24110b);color:#fae4a8}
+.project:nth-child(2) .project__number{color:#d59b3a}.project:nth-child(2) .project__info>p{color:#ead8ae;opacity:.8}.project:nth-child(2) .project__tags span{color:#f0d28d}.project:nth-child(2) .project__link{color:#271408;background:var(--shop-cream);border:0;padding:13px 18px;border-radius:4px}.project:nth-child(2) .project__preview{border-color:#89531d;box-shadow:0 34px 90px rgba(0,0,0,.32)}
+
+.project:nth-child(3){background:radial-gradient(circle at 8% 80%,rgba(154,35,52,.22),transparent 22%),linear-gradient(115deg,#0f0d0b,#17100d 55%,#090909);color:#f1d7bd}
+.project:nth-child(3) .project__number,.project:nth-child(3) h2{color:#d86631}.project:nth-child(3) .project__info>p{color:#d7bca9;opacity:.78}.project:nth-child(3) .project__link{background:var(--shop-red);color:#fff;border:0;padding:13px 18px;border-radius:4px}.project:nth-child(3) .project__preview{border-color:#59252a;box-shadow:0 34px 90px rgba(0,0,0,.42)}
+
+.project:nth-child(4){position:relative;overflow:hidden;background:radial-gradient(circle at 10% 88%,rgba(154,35,52,.2),transparent 24%),linear-gradient(115deg,#14271c,#0e2318 60%,#081611);color:#f3ddac}
+.project:nth-child(4)::after{content:"";position:absolute;width:300px;height:300px;right:-60px;bottom:-50px;background:url('./assets/takoyaki.webp') center/contain no-repeat;opacity:.16;pointer-events:none}
+.project:nth-child(4) .project__number,.project:nth-child(4) h2{color:#d0464d}.project:nth-child(4) .project__info>p{color:#dfd0b0;opacity:.78}.project:nth-child(4) .project__link{background:var(--shop-red);color:#fff;border:0;padding:13px 18px;border-radius:4px}.project:nth-child(4) .project__preview{border-color:#62412c;box-shadow:0 34px 90px rgba(0,0,0,.38)}
+
+.project__preview{border-radius:10px}.browser-bar{background:#efe9dc;border-color:#ded3c1}.project__link{transition:transform .18s ease,filter .18s ease}.project__link:hover{transform:translateY(-2px);text-decoration:none;filter:brightness(1.04)}
+.featured-badge{background:var(--shop-moss);border-color:var(--shop-moss);color:#fff;opacity:1}.project--featured::before{color:var(--shop-moss);opacity:.7}
+
+.updates-section,.about-section,footer{background:#fffaf0}.section-title p,.about-label{color:var(--shop-moss)}.section-title h2,.about-grid h2{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;color:var(--shop-brown)}.updates-list,.about-grid{border-color:rgba(90,42,18,.55)}.update-row{border-color:rgba(90,42,18,.13)}
+.about-grid{position:relative;overflow:hidden;grid-template-columns:.8fr 1.2fr}.about-copy{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:26px;align-items:center}.about-copy p{margin:0;color:#6b5947;max-width:620px}.about-mascot{width:220px;height:220px;object-fit:contain;filter:drop-shadow(0 16px 24px rgba(90,42,18,.12))}.about-links a{color:var(--shop-brown);border-color:var(--shop-brown)}
+.footer-brand{display:flex;align-items:center;gap:8px}.footer-brand img{width:24px;height:24px;object-fit:contain}footer{color:#745f4a;border-color:rgba(90,42,18,.18)}
+
+@media(max-width:980px){.intro-inner{grid-template-columns:1fr}.intro-copy{max-width:620px}.hero-mascot{width:min(100%,430px)}.about-copy{grid-template-columns:1fr 180px}.about-mascot{width:180px;height:180px}}
+@media(max-width:640px){.header-inner{height:64px}.brand-mark{width:38px;height:38px}.brand-copy strong{font-size:18px}.brand-copy>span{display:none}nav a:nth-child(2),nav a:nth-child(3){display:none}.intro{padding:54px 0 42px}.intro h1{font-size:clamp(56px,18vw,82px)}.intro-tagline{font-size:21px}.hero-mascot{width:310px;margin-left:auto;margin-right:-48px}.intro-count{margin-top:-12px}.project:nth-child(4)::after{width:180px;height:180px;right:-40px;bottom:-25px}.about-copy{grid-template-columns:1fr}.about-mascot{justify-self:end;width:160px;height:160px;margin-top:-26px}.footer-brand img{display:none}}
