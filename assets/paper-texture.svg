@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <filter id="paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" seed="27" stitchTiles="stitch" result="fine"/>
+      <feColorMatrix in="fine" type="saturate" values="0" result="gray"/>
+      <feComponentTransfer in="gray" result="soft">
+        <feFuncR type="gamma" amplitude="0.16" exponent="1.35" offset="0.88"/>
+        <feFuncG type="gamma" amplitude="0.16" exponent="1.35" offset="0.84"/>
+        <feFuncB type="gamma" amplitude="0.16" exponent="1.35" offset="0.76"/>
+        <feFuncA type="table" tableValues="0 0.28"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="soft" mode="multiply"/>
+    </filter>
+    <filter id="fibers" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="turbulence" baseFrequency="0.015 0.19" numOctaves="2" seed="11" stitchTiles="stitch" result="fiberNoise"/>
+      <feColorMatrix in="fiberNoise" type="matrix" values="0.55 0 0 0 0.45  0 0.42 0 0 0.35  0 0 0.30 0 0.24  0 0 0 0.12 0"/>
+      <feGaussianBlur stdDeviation="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="#f3e9d5" filter="url(#paper)"/>
+  <rect width="1024" height="1024" fill="transparent" filter="url(#fibers)" opacity="0.22"/>
+  <g fill="none" stroke="#8f765d" stroke-opacity="0.075" stroke-width="1.1">
+    <path d="M-40 190 C160 145 250 235 430 205 S760 120 1065 185"/>
+    <path d="M-30 505 C180 455 335 560 520 510 S830 420 1050 490"/>
+    <path d="M-20 820 C190 760 350 875 570 820 S840 750 1055 805"/>
+    <path d="M115 -20 C70 180 170 280 120 430 S40 720 110 1050"/>
+    <path d="M585 -20 C535 170 625 305 575 455 S500 735 560 1050"/>
+  </g>
+  <g fill="#7b6046" fill-opacity="0.045">
+    <circle cx="84" cy="116" r="1.6"/><circle cx="205" cy="338" r="1.1"/><circle cx="402" cy="95" r="1.3"/><circle cx="651" cy="245" r="1.5"/><circle cx="883" cy="149" r="1.2"/>
+    <circle cx="142" cy="724" r="1.4"/><circle cx="356" cy="641" r="1.2"/><circle cx="733" cy="694" r="1.5"/><circle cx="918" cy="842" r="1.3"/>
+  </g>
+</svg>
