@@ -7,7 +7,12 @@ window.KANJIKI_TOOLS = [
     url: "https://kanjiki.github.io/coc-continuation-finder/",
     action: "継続先を探す",
     tags: ["継続探索者", "シナリオ検索", "CoC"],
-    tone: "paper",
+    audience: "継続探索者の次のシナリオを探したい人",
+    facts: [
+      "継続形態・推薦理由を表示",
+      "BOOTH / pixiv / TALTO等の販売・配布元を表示",
+      "出てほしい継続先候補を送れる"
+    ],
     featured: true
   },
   {
@@ -18,7 +23,12 @@ window.KANJIKI_TOOLS = [
     url: "https://kanjiki.github.io/coc-player-type/",
     action: "診断してみる",
     tags: ["診断", "22問", "T / R / P / G"],
-    tone: "ink"
+    audience: "自分がTRPGで何を重視しているか知りたい人",
+    facts: [
+      "22問 / T・R・P・G の4軸",
+      "12タイプで結果を表示",
+      "結果画像の作成・共有に対応"
+    ]
   },
   {
     id: "03",
@@ -28,7 +38,12 @@ window.KANJIKI_TOOLS = [
     url: "https://kanjiki.github.io/coc-player-status/",
     action: "遊んでみる",
     tags: ["プレイ型診断", "24 Scenes", "ステータス"],
-    tone: "mist"
+    audience: "短編を遊びながら探索者ステータスを出したい人",
+    facts: [
+      "24 Scene の分岐プレイ",
+      "STR / CON / DEX など6版風ステータスを算出",
+      "戻る・中断再開・結果画像・共有に対応"
+    ]
   },
   {
     id: "04",
@@ -38,7 +53,12 @@ window.KANJIKI_TOOLS = [
     url: "https://kanjiki.github.io/kanjiki-HP/ghoul-kp-style/",
     action: "KPスタイルを診断する",
     tags: ["KP診断", "G / H / O / U / L", "CoC"],
-    tone: "ink"
+    audience: "自分のキーパリング判断の傾向を整理したい人",
+    facts: [
+      "Game / Host / Orchestration / Unscripted / Logic の5軸",
+      "卓上の判断場面から傾向を診断",
+      "KPの上手さや善悪を測るテストではありません"
+    ]
   }
 ];
 
