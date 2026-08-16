@@ -3,25 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f3f0e9">
+  <meta name="theme-color" content="#f3e9d5">
   <title>かんじき屋 | TRPG Tools</title>
-  <meta name="description" content="TRPG / CoCで楽しく遊べるものや、ちょっと便利なツールを作っています。">
+  <meta name="description" content="TRPGで遊べるもの、ちょっと便利なもの。かんじき屋のTRPG / CoCツール置き場です。">
   <meta property="og:title" content="かんじき屋 | TRPG Tools">
-  <meta property="og:description" content="TRPG / CoCで楽しく遊べるものや、ちょっと便利なツールを作っています。">
+  <meta property="og:description" content="TRPGで遊べるもの、ちょっと便利なもの。">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://kanjiki.github.io/kanjiki-HP/assets/kanjikiya-icon.webp">
+  <link rel="icon" href="./assets/kanjikiya-icon.webp" type="image/webp">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./featured.css">
+  <link rel="stylesheet" href="./kanjikiya.css">
 </head>
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="かんじき屋 TRPG Tools">
-        <strong>かんじき屋</strong><span>TRPG TOOLS</span>
+        <img class="brand-mark" src="./assets/kanjikiya-icon.webp" alt="">
+        <span class="brand-copy"><strong>かんじき屋</strong><span>TRPG TOOLS / by かんじき</span></span>
       </a>
       <nav aria-label="メインナビゲーション">
-        <a href="#tools">Works</a>
+        <a href="#tools">Gallery</a>
         <a href="#updates">Updates</a>
-        <a href="https://x.com/kanjiki_trpg_k" target="_blank" rel="noopener">X ↗</a>
+        <a href="#about">About</a>
+        <a href="https://x.com/kanjiki_trpg_k" target="_blank" rel="noopener">X @kanjiki_trpg_k ↗</a>
       </nav>
     </div>
   </header>
@@ -29,12 +34,14 @@
   <main id="top">
     <section class="intro">
       <div class="wrap intro-inner">
-        <div>
+        <div class="intro-title">
           <p class="intro-label">KANJIKIYA / TRPG TOOLS</p>
-          <h1>PLAY.<br>FIND.<br>ENJOY.</h1>
+          <h1>かんじき屋</h1>
+          <p class="intro-tagline">TRPGで遊べるもの、<br>ちょっと便利なもの。</p>
+          <a class="intro-social" href="https://x.com/kanjiki_trpg_k" target="_blank" rel="noopener">X&nbsp;&nbsp;@kanjiki_trpg_k ↗</a>
         </div>
         <div class="intro-copy">
-          <p>TRPG / CoCで楽しく遊べるものや、<br>ちょっと便利なツールを作っています。</p>
+          <img class="hero-mascot" src="./assets/takoyaki.webp" alt="かんじき屋のマスコット">
           <div class="intro-count"><strong data-tool-count>00</strong><span>WORKS AVAILABLE</span></div>
         </div>
       </div>
@@ -58,24 +65,28 @@
       </div>
     </section>
 
-    <section class="about-section">
+    <section id="about" class="about-section">
       <div class="wrap about-grid">
         <div>
+          <p class="about-label">ABOUT</p>
           <h2>かんじき屋</h2>
           <div class="about-links">
             <a href="https://x.com/kanjiki_trpg_k" target="_blank" rel="noopener">X ↗</a>
             <a href="https://github.com/kanjiki" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
         </div>
-        <p>TRPG / CoCで遊べるものや、遊ぶときにちょっと便利なものを作っています。制作は「かんじき屋」名義、作者はかんじきです。</p>
+        <div class="about-copy">
+          <p>TRPG / CoCで遊べるものや、遊ぶときにちょっと便利なものを作っています。制作は「かんじき屋」名義、作者はかんじきです。</p>
+          <img class="about-mascot" src="./assets/takoyaki.webp" alt="">
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap footer-inner">
-      <span>© かんじき屋 / by かんじき</span>
-      <span>PLAY / FIND / ENJOY</span>
+      <span class="footer-brand"><img src="./assets/kanjikiya-icon.webp" alt=""> © かんじき屋 / by かんじき</span>
+      <span>TRPG TOOLS</span>
     </div>
   </footer>
 
