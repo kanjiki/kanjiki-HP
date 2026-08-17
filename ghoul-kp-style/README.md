@@ -18,6 +18,14 @@ Google Apps Script で公開していた GHOUL KP STYLE TEST の GitHub Pages �
 
 GitHub Pages は別オリジンなので、フロントエンドは `text/plain` + `mode: no-cors` で JSON を送信します。Apps Script 側の `doPost()` が JSON を読み、既存の `submitResult()` を呼びます。
 
+## 旧GAS URLからの移行
+
+既存のGAS版URLを告知済みでもリンクを差し替える必要はありません。v1.2の `doGet()` は旧GAS URLへのアクセスを次のGitHub Pages版へ自動転送します。
+
+`https://kanjiki.github.io/kanjiki-HP/ghoul-kp-style/`
+
+同じWeb Appの `doPost()` は引き続き回答保存APIとして利用します。そのため、旧URLは「入口」、GitHub Pagesは「診断画面」、Apps Scriptは「回答保存」という役割分離になります。
+
 ## v1.2 calibration
 
 2026-08-17 時点の 128 回答（詳細 96 / クイック 32）の再解析をもとに、診断構造を調整しています。
