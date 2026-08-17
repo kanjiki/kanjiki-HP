@@ -1,14 +1,18 @@
 const RESULTS_PROPERTY = 'GHOUL_RESULTS_SHEET_ID';
+const PUBLIC_APP_URL = 'https://kanjiki.github.io/kanjiki-HP/ghoul-kp-style/';
 const ANSWER_HEADERS = ['受信日時','回答日時','回答者名','モード','タイプ','タイプ名','G','H','O','U','L','厳格度','厳格度区分','有効回答数','独自裁定数','回答JSON','設問ID','厳格度指数','厳格度最大幅','診断バージョン','設問セットバージョン'];
 const DETAIL_HEADERS = ['受信日時','回答者名','モード','タイプ','設問ID','回答順','裁定','理由','自由記述'];
 
+/**
+ * 旧GAS版の公開URLへ来た利用者をGitHub Pages版へ案内します。
+ * POSTは従来どおり回答保存APIとしてdoPost()で受け取ります。
+ */
 function doGet() {
-  const template = HtmlService.createTemplateFromFile('index');
-  template.appUrl = ScriptApp.getService().getUrl() || '';
-  return template.evaluate().setTitle('GHOUL KP STYLE TEST v1.2')
-    .addMetaTag('viewport', 'width=device-width, initial-scale=1');
+  const target = PUBLIC_APP_URL;
+  const escapedTarget = target.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const html = `<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=${escapedTarget}"><title>GHOUL KP STYLE TEST</title></head><body><p>新しいGHOUL KP STYLE TESTへ移動します。<a href="${escapedTarget}">自動で移動しない場合はこちら</a></p><script>location.replace(${JSON.stringify(target)} + location.search + location.hash);<\/script></body></html>`;
+  return HtmlService.createHtmlOutput(html).setTitle('GHOUL KP STYLE TEST');
 }
-
 
 /** GitHub Pages など外部フロントエンドから回答を受け取ります。
  *  CORS preflight を避けるため、フロント側は text/plain で JSON 文字列を送信します。
