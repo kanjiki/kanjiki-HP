@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f5f0e7">
+  <meta name="theme-color" content="#f7f1e5">
   <title>つまようじ商会 | TRPG Tools</title>
   <meta name="description" content="TRPGで遊べるもの、ちょっと便利なもの。つまようじ商会のTRPG / CoCツール置き場です。">
   <meta property="og:title" content="つまようじ商会 | TRPG Tools">
@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://kanjiki.github.io/kanjiki-HP/assets/kanjikiya-icon.webp">
   <link rel="icon" href="./assets/kanjikiya-icon.webp" type="image/webp">
-  <link rel="stylesheet" href="./tsumayoji.css?v=20260817-0702">
+  <link rel="stylesheet" href="./tsumayoji.css?v=20260817-1015">
 </head>
 <body>
   <header class="site-header">
@@ -20,50 +20,47 @@
         <img src="./assets/kanjikiya-icon.webp" alt="">
         <span class="brand-copy">
           <strong>つまようじ商会</strong>
-          <small>TSUMAYOJI &amp; Co. / TRPG TOOLS</small>
+          <small>TRPG TOOLS</small>
         </span>
       </a>
       <nav aria-label="メインナビゲーション">
-        <a href="#featured">注目</a>
-        <a href="#works">作品</a>
-        <a href="#updates">更新</a>
+        <a href="#works">GALLERY</a>
+        <a href="#updates">UPDATES</a>
         <a href="https://x.com/tsumayoji_trpg?s=11&t=d-IRtNkiM-GSntdTbdJ16A" target="_blank" rel="noopener">X ↗</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero hero--icon-only">
-      <div class="wrap hero-inner hero-inner--icon-only">
-        <div class="hero-copy">
-          <p class="eyebrow">TSUMAYOJI &amp; Co. / TRPG TOOLS</p>
-          <h1>つまようじ商会</h1>
-          <p class="tagline">TRPGで遊べるもの、ちょっと便利なもの。</p>
-          <div class="hero-links">
-            <a href="#featured">注目の作品を見る</a>
-            <a href="https://x.com/tsumayoji_trpg?s=11&t=d-IRtNkiM-GSntdTbdJ16A" target="_blank" rel="noopener">Xで更新を見る ↗</a>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <p class="eyebrow">TSUMAYOJI &amp; Co. / TRPG TOOLS</p>
+        <h1>TRPGで遊べるもの、<br>ちょっと便利なもの。</h1>
+        <p class="hero-note">診断・検索・プレイ型ツールをまとめています。</p>
+      </div>
+    </section>
+
+    <section id="works" class="works-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">PICK UP</span>
+            <h2>公開中のツール</h2>
           </div>
+          <span class="section-count" data-tool-count>04</span>
         </div>
-      </div>
-    </section>
-
-    <section id="featured" class="featured-section">
-      <div class="wrap">
-        <div class="section-kicker">FEATURED WORK</div>
-        <div id="featured-work"></div>
-      </div>
-    </section>
-
-    <section id="works" class="other-section">
-      <div class="wrap">
-        <div class="section-kicker">OTHER WORKS</div>
-        <div id="other-works" class="other-list"></div>
+        <div id="works-grid" class="works-grid"></div>
       </div>
     </section>
 
     <section id="updates" class="updates-section">
       <div class="wrap">
-        <div class="section-kicker">UPDATES</div>
+        <div class="section-head section-head--updates">
+          <div>
+            <span class="section-kicker">UPDATES</span>
+            <h2>更新情報</h2>
+          </div>
+        </div>
         <div id="updates-list" class="updates-list"></div>
       </div>
     </section>
@@ -77,7 +74,7 @@
     </div>
   </footer>
 
-  <script src="./tools.js?v=20260817-0626"></script>
-  <script src="./tsumayoji.js?v=20260817-0626"></script>
+  <script src="./tools.js?v=20260817-1015"></script>
+  <script src="./tsumayoji.js?v=20260817-1015"></script>
 </body>
 </html>
