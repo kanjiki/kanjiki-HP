@@ -14,7 +14,7 @@
 
   if (root) {
     root.innerHTML = tools.map(tool => `
-      <article class="tool-card${tool.featured ? ' tool-card--featured' : ''}">
+      <article class="tool-card${tool.featured ? ' tool-card--featured' : ''}" data-url="${tool.url}" role="link" tabindex="0" aria-label="${tool.title}を開く">
         <div class="card-head">
           <span class="card-num">${tool.id}</span>
           ${tool.featured ? '<span class="featured-pill">FEATURED</span>' : ''}
@@ -25,15 +25,32 @@
           <p>${tool.description}</p>
           <div class="tags">${tags(tool)}</div>
         </div>
-        <a class="card-preview" href="${tool.url}" target="_blank" rel="noopener" aria-label="${tool.title}を開く">
+        <a class="card-preview" href="${tool.url}" aria-label="${tool.title}を開く">
           <iframe src="${tool.url}" title="${tool.title} プレビュー" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
           <span class="preview-cover"></span>
         </a>
         <div class="card-foot">
-          <a class="card-link" href="${tool.url}" target="_blank" rel="noopener">${tool.action}</a>
+          <a class="card-link" href="${tool.url}">${tool.action}</a>
           <span class="card-arrow">↗</span>
         </div>
       </article>`).join('');
+
+    root.querySelectorAll('.tool-card').forEach(card => {
+      const open = () => {
+        const url = card.dataset.url;
+        if (url) window.location.href = url;
+      };
+      card.addEventListener('click', event => {
+        if (event.target.closest('a')) return;
+        open();
+      });
+      card.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          open();
+        }
+      });
+    });
   }
 
   if (progressRoot) {
