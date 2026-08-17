@@ -34,7 +34,7 @@ window.KANJIKI_TOOLS = [
     code: "GHOUL KP STYLE TEST",
     title: "GHOUL KP STYLE TEST",
     description: "KPとして卓でどんな判断を重視しやすいかを、Game / Host / Orchestration / Unscripted / Logic の5軸から見るKPスタイル診断です。",
-    url: "https://kanjiki.github.io/GHOUL-KP/",
+    url: "https://kanjiki.github.io/kanjiki-HP/ghoul-kp-style/",
     action: "KPスタイルを診断する",
     tags: ["KP診断", "G / H / O / U / L", "CoC"]
   }
