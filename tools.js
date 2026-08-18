@@ -37,6 +37,15 @@ window.KANJIKI_TOOLS = [
     url: "https://kanjiki.github.io/GHOUL-KP/",
     action: "KPスタイルを診断する",
     tags: ["KP診断", "G / H / O / U / L", "CoC"]
+  },
+  {
+    id: "05",
+    code: "COC GACHA CHARACTER",
+    title: "あなたの探索者がソシャゲに実装されたら？",
+    description: "探索者の能力値と行動傾向から、ソシャゲに実装された場合のレアリティ・ロール・属性・スキル・実装履歴などを生成するPC診断です。",
+    url: "https://coc-gacha-character.kanjiki.workers.dev/",
+    action: "探索者を実装する",
+    tags: ["PC診断", "探索者", "ソシャゲ"]
   }
 ];
 
@@ -79,6 +88,7 @@ window.KANJIKI_IN_PROGRESS = [
 ];
 
 window.KANJIKI_UPDATES = [
+  { date: "2026.08", title: "あなたの探索者がソシャゲに実装されたら？", text: "探索者の能力値と行動傾向から、ソシャゲ風の実装情報を生成するPC診断を公開中。" },
   { date: "2026.08", title: "この自陣、次どこ行く？", text: "継続探索者向けのシナリオ候補検索を公開中。" },
   { date: "2026.08", title: "GHOUL KP STYLE TEST", text: "G / H / O / U / L の5軸でKPの判断傾向を見る診断を公開中。" },
   { date: "2026.08", title: "その角を曲がる前に", text: "プレイ型の探索者ステータス診断を公開中。" },
